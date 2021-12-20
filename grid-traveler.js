@@ -4,8 +4,8 @@
  * How many ways can you travel on a grid of m rows by n columns?
  * Movement is restricted to only right or down movements on the grid.
  * 
- * Time: O(n^2)
- * Space: O(n)
+ * Time: O(2^m+n)
+ * Space: O(m+n)
  * 
  * @param {number} m 
  * @param {number} n 
