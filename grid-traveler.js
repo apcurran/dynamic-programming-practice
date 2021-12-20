@@ -40,9 +40,10 @@ function gridTraveler(m, n, memo = new Map()) {
     // base case
     if (m === 0 || n === 0) return 0;
 
-    memo.set(key, gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo));
+    const val = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo);
+    memo.set(key, val);
 
-    return memo.get(key);
+    return val;
 }
 
 console.log( gridTraveler(1, 1) ); // 1
