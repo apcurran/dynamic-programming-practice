@@ -33,12 +33,15 @@
 function gridTraveler(m, n, memo = new Map()) {
     const key = m + ":" + n; // unique identifying key
 
-    // check cache, return stored value
+    // check cache -- if available, then return stored value
     if (memo.has(key)) return memo.get(key);
-    // base case
-    if (m === 1 && n === 1) return 1;
-    // base case
-    if (m === 0 || n === 0) return 0;
+
+    // base cases
+    if (m === 1 && n === 1) {
+        return 1;
+    } else if (m === 0 || n === 0) {
+        return 0;
+    }
 
     const val = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo);
     memo.set(key, val);
