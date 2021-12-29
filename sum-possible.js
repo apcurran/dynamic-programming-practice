@@ -6,17 +6,34 @@
  * You may reuse numbers of the array as many times as necessary.
  * You may assume that the target amount is non-negative.
  * 
- * Solution 1
+ * Solution 1 -- brute force
  * 
- * Time: O()
- * Space: O()
+ * m = target sum
+ * n = array length
+ * 
+ * Time: O(n^m)
+ * Space: O(m)
  * 
  * @param {number} amount
  * @param {number[]} numbers
  * @returns {boolean}
  */
 function sumPossible(amount, numbers) {
-    
+    if (amount === 0) { // base case 1
+        return true;
+    } else if (amount < 0) { // base case 2
+        return false;
+    }
+
+    for (let num of numbers) {
+        const remainder = amount - num;
+
+        if (sumPossible(remainder, numbers) === true) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 console.log( sumPossible(8, [5, 12, 4]) ); // -> true, 4 + 4;
