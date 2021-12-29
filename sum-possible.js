@@ -42,7 +42,7 @@
  * m = target sum
  * n = array length
  * 
- * Time: O()
+ * Time: O(m * n)
  * Space: O(m)
  * 
  * @param {number} amount
