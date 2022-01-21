@@ -70,6 +70,5 @@ function canConstruct(target, wordBank, memo = new Map()) {
 console.log( canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]) ); // true
 console.log( canConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]) ); // false
 console.log(
-    canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
-                ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"])
+    canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"])
 ); // false
