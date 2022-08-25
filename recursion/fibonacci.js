@@ -26,14 +26,14 @@
 function fib(n, cache = new Map()) {
     if (n === 0 || n === 1) return n;
 
-    if (!cache.has(n)) {
-        // Calc n value
-        const nValue = fib(n - 1, cache) + fib(n - 2, cache);
-        // Cache n value
-        cache.set(n, nValue);
-    }
+    if (cache.has(n)) return cache.get(n);
+    
+    // Calc n value
+    const nValue = fib(n - 1, cache) + fib(n - 2, cache);
+    // Cache n value
+    cache.set(n, nValue);
 
-    return cache.get(n);
+    return nValue;
 }
 
 console.log( fib(5) ); // 5
