@@ -80,8 +80,8 @@ function howSum(targetSum, numbersArr) {
 //  * m = targetSum
 //  * n = numbersArr.length
 //  * 
-//  * Time: O(n * m)
-//  * Space: O(m)
+//  * Time: O(n * m^2)
+//  * Space: O(m^2)
 //  * 
 //  * @param {number} targetSum 
 //  * @param {number[]} numbersArr 
