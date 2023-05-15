@@ -8,10 +8,10 @@
 //  * Solution 1
 //  * 
 //  * m = targetSum
-//  * n = numbersArr.length
+//  * n = numbersArr length
 //  * 
-//  * Time: O(n * m^2)
-//  * Space: O(m^2)
+//  * Time: O(n^m * m)
+//  * Space: O(m)
 //  * 
 //  * @param {number} targetSum 
 //  * @param {number[]} numbersArr 
@@ -44,8 +44,8 @@
  * m = targetSum
  * n = numbersArr.length
  * 
- * Time: O(n * m^2)
- * Space: O(m^2)
+ * Time: O(n^m)
+ * Space: O(m)
  * 
  * @param {number} targetSum 
  * @param {number[]} numbersArr 
@@ -80,8 +80,8 @@ function howSum(targetSum, numbersArr) {
 //  * m = targetSum
 //  * n = numbersArr.length
 //  * 
-//  * Time: O(n * m^2)
-//  * Space: O(m^2)
+//  * Time: O(n * m)
+//  * Space: O(m)
 //  * 
 //  * @param {number} targetSum 
 //  * @param {number[]} numbersArr 
