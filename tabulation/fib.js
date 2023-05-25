@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Solution
+ * Solution 1
  * time: O(n)
  * space: O(n)
  * 
@@ -12,10 +12,10 @@ function fib(n) {
     let table = Array(n + 1).fill(0);
     table[1] = 1;
 
-    for (let i = 0; i <= n; i++) {
-        const currVal = table[i];
-        table[i + 1] += currVal;
-        table[i + 2] += currVal;
+    for (let i = 2; i <= n; i++) {
+        const onePreviousValue = table[i - 1];
+        const twoPreviousValue = table[i - 2];
+        table[i] = onePreviousValue + twoPreviousValue;
     }
 
     return table[n];
