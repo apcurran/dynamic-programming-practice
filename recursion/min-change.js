@@ -88,4 +88,5 @@ function minChange(amount, coins, cache = new Map()) {
 }
 
 console.log(minChange(4, [1, 2, 3])); // 2
+console.log(minChange(5, [1, 2, 3])); // 2
 
