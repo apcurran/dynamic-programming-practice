@@ -4,14 +4,14 @@
  * solution 1
  * time: O(m * n)
  * space: O(m * n)
- * 
+ *
  * @param {number} rows
  * @param {number} columns
  */
 function gridTraveler(rows, columns) {
     let table = Array(rows + 1)
-                    .fill(0)
-                    .map(() => Array(columns + 1).fill(0));
+        .fill(0)
+        .map(() => Array(columns + 1).fill(0));
     table[1][1] = 1;
 
     for (let i = 0; i <= rows; i++) {
@@ -31,8 +31,8 @@ function gridTraveler(rows, columns) {
     return table[rows][columns];
 }
 
-console.log( gridTraveler(1, 1) ); // 1
-console.log( gridTraveler(2, 3) ); // 3
-console.log( gridTraveler(3, 2) ); // 3
-console.log( gridTraveler(3, 3) ); // 6
-console.log( gridTraveler(18, 18) ); // 2333606220
+console.log(gridTraveler(1, 1)); // 1
+console.log(gridTraveler(2, 3)); // 3
+console.log(gridTraveler(3, 2)); // 3
+console.log(gridTraveler(3, 3)); // 6
+console.log(gridTraveler(18, 18)); // 2333606220

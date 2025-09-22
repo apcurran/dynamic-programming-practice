@@ -5,14 +5,14 @@
 //  * of numbers that add up to the exact targetSum number.
 //  * If there is a tie for the shortest combo,
 //  * then you may return any one of the shortest combos.
-//  * 
+//  *
 //  * Solution 1
 //  * m = target sum
 //  * n = numbers.length
-//  * 
+//  *
 //  * Time: O(n^m * m)
 //  * Space: O(m^2)
-//  * 
+//  *
 //  * @param {number} targetSum
 //  * @param {number[]} numbers
 //  * @returns {number[]|null}
@@ -47,14 +47,14 @@
  * of numbers that add up to the exact targetSum number.
  * If there is a tie for the shortest combo,
  * then you may return any one of the shortest combos.
- * 
+ *
  * Solution 2 -- memoized ver
  * m = target sum
  * n = numbers.length
- * 
+ *
  * Time: O(m^2 * n)
  * Space: O(m^2)
- * 
+ *
  * @param {number} targetSum
  * @param {number[]} numbers
  * @returns {number[]|null}
@@ -88,7 +88,7 @@ function bestSum(targetSum, numbers, memo = new Map()) {
     return shortestCombo;
 }
 
-console.log( bestSum(7, [5, 3, 4, 7]) ); // [7]
-console.log( bestSum(8, [2, 3, 5]) ); // [3, 5]
-console.log( bestSum(8, [1, 4, 5]) ); // [4, 4]
-console.log( bestSum(100, [1, 2, 5, 25]) ); // [25, 25, 25, 25]
+console.log(bestSum(7, [5, 3, 4, 7])); // [7]
+console.log(bestSum(8, [2, 3, 5])); // [3, 5]
+console.log(bestSum(8, [1, 4, 5])); // [4, 4]
+console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]

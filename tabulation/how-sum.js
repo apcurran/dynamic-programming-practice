@@ -6,9 +6,9 @@
  * n = numsArr.length
  * time: O(m^2 * n)
  * space: O(m^2)
- * 
- * @param {number} targetSum 
- * @param {number[]} numsArr 
+ *
+ * @param {number} targetSum
+ * @param {number[]} numsArr
  * @returns {number[]}
  */
 function howSum(targetSum, numsArr) {
@@ -28,6 +28,6 @@ function howSum(targetSum, numsArr) {
     return table[targetSum];
 }
 
-console.log( howSum(7, [2, 3]) ); // [3, 2, 2]
-console.log( howSum(7, [5, 3, 4, 7]) ); // [4, 3]
-console.log( howSum(7, [2, 4]) ); // null
+console.log(howSum(7, [2, 3])); // [3, 2, 2]
+console.log(howSum(7, [5, 3, 4, 7])); // [4, 3]
+console.log(howSum(7, [2, 4])); // null

@@ -1,17 +1,16 @@
 "use strict";
 
-
 // /**
 //  * Solution 1 -- brute force
-//  * 
+//  *
 //  * m = target.length
 //  * n = wordBank.length
-//  * 
+//  *
 //  * Time: O((n^m) * m)
 //  * Space: O(m^2)
-//  * 
-//  * @param {string} target 
-//  * @param {string[]} wordBank 
+//  *
+//  * @param {string} target
+//  * @param {string[]} wordBank
 //  * @returns {boolean}
 //  */
 // function canConstruct(target, wordBank) {
@@ -33,15 +32,15 @@
 
 /**
  * Solution 2 -- memo ver
- * 
+ *
  * m = target.length
  * n = wordBank.length
- * 
+ *
  * Time: O(n * m^2)
  * Space: O(m^2)
- * 
- * @param {string} target 
- * @param {string[]} wordBank 
+ *
+ * @param {string} target
+ * @param {string[]} wordBank
  * @returns {boolean}
  */
 function canConstruct(target, wordBank, memo = new Map()) {
@@ -67,8 +66,17 @@ function canConstruct(target, wordBank, memo = new Map()) {
     return false;
 }
 
-console.log( canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]) ); // true
-console.log( canConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]) ); // false
+console.log(canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"])); // true
 console.log(
-    canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"])
+    canConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]),
+); // false
+console.log(
+    canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
+        "e",
+        "ee",
+        "eee",
+        "eeee",
+        "eeeee",
+        "eeeeee",
+    ]),
 ); // false

@@ -6,9 +6,9 @@
 //  * c = coins array length
 //  * time: O(c^a)
 //  * space: O(a)
-//  * 
-//  * @param {number} amount 
-//  * @param {number[]} coins 
+//  *
+//  * @param {number} amount
+//  * @param {number[]} coins
 //  * @returns {number}
 //  */
 // function minChange(amount, coins) {
@@ -45,9 +45,9 @@
  * c = coins array length
  * time: O(a * c)
  * space: O(a)
- * 
- * @param {number} amount 
- * @param {number[]} coins 
+ *
+ * @param {number} amount
+ * @param {number[]} coins
  * @param {Map=} cache
  * @returns {number}
  */
@@ -89,4 +89,3 @@ function minChange(amount, coins, cache = new Map()) {
 
 console.log(minChange(4, [1, 2, 3])); // 2
 console.log(minChange(5, [1, 2, 3])); // 2
-

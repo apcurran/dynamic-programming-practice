@@ -1,15 +1,17 @@
 {
-  "name": "dynamic-programming-practice",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ."
-  },
-  "author": "Alex Curran",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.54.0"
-  }
+    "name": "dynamic-programming-practice",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "npx oxlint .",
+        "format": "npx prettier . --write"
+    },
+    "author": "Alex Curran",
+    "license": "ISC",
+    "devDependencies": {
+        "oxlint": "^1.16.0",
+        "prettier": "3.6.2"
+    }
 }

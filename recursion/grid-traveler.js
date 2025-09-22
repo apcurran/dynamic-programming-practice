@@ -3,12 +3,12 @@
 // /**
 //  * How many ways can you travel on a grid of m rows by n columns?
 //  * Movement is restricted to only right or down movements on the grid.
-//  * 
+//  *
 //  * Time: O(2^m+n)
 //  * Space: O(m+n)
-//  * 
-//  * @param {number} m 
-//  * @param {number} n 
+//  *
+//  * @param {number} m
+//  * @param {number} n
 //  * @returns {number}
 //  */
 // function gridTraveler(m, n) {
@@ -22,12 +22,12 @@
 
 /**
  * Solution 2 - memo version
- * 
+ *
  * Time: O(m * n)
  * Space: O(m + n)
- * 
- * @param {number} m 
- * @param {number} n 
+ *
+ * @param {number} m
+ * @param {number} n
  * @returns {number}
  */
 function gridTraveler(m, n, memo = new Map()) {
@@ -49,8 +49,8 @@ function gridTraveler(m, n, memo = new Map()) {
     return val;
 }
 
-console.log( gridTraveler(1, 1) ); // 1
-console.log( gridTraveler(2, 3) ); // 3
-console.log( gridTraveler(3, 2) ); // 3
-console.log( gridTraveler(3, 3) ); // 6
-console.log( gridTraveler(18, 18) ); // 2333606220
+console.log(gridTraveler(1, 1)); // 1
+console.log(gridTraveler(2, 3)); // 3
+console.log(gridTraveler(3, 2)); // 3
+console.log(gridTraveler(3, 3)); // 6
+console.log(gridTraveler(18, 18)); // 2333606220

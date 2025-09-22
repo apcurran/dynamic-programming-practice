@@ -4,8 +4,8 @@
  * Solution 1
  * time: O(n)
  * space: O(n)
- * 
- * @param {number} n 
+ *
+ * @param {number} n
  * @returns {number}
  */
 function fib(n) {
@@ -21,7 +21,7 @@ function fib(n) {
     return table[n];
 }
 
-console.log( fib(6) ); // 8
-console.log( fib(7) ); // 13
-console.log( fib(8) ); // 21
-console.log( fib(50) ); // 12586269025
+console.log(fib(6)); // 8
+console.log(fib(7)); // 13
+console.log(fib(8)); // 21
+console.log(fib(50)); // 12586269025

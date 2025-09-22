@@ -4,9 +4,9 @@
  * Solution 1 -- recursive
  * Time: O(n^m)
  * Space: O(m)
- * 
- * @param {string} target 
- * @param {string[]} wordBank 
+ *
+ * @param {string} target
+ * @param {string[]} wordBank
  * @returns {string[][]}
  */
 function allConstruct(target, wordBank) {
@@ -26,10 +26,12 @@ function allConstruct(target, wordBank) {
     return result;
 }
 
-console.log( allConstruct("purple", ["purp", "p", "ur", "le", "purpl"]) );
+console.log(allConstruct("purple", ["purp", "p", "ur", "le", "purpl"]));
 // [
 //     ["purp", "le"],
 //     ["p", "ur", "p", "le"]
 // ]
-console.log( allConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]) );
+console.log(
+    allConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]),
+);
 // []
