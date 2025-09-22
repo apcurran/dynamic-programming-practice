@@ -14,28 +14,52 @@
 //     return fib(n - 1) + fib(n - 2);
 // }
 
+// /**
+//  * Solution 2 -- memoized
+//  * Time: O(n)
+//  * Space: O(n)
+//  *
+//  * @param {number} n
+//  * @param {Map<number, number>} cache
+//  * @returns {number}
+//  */
+// function fib(n, cache = new Map()) {
+//     if (n === 0 || n === 1) return n;
+
+//     if (cache.has(n)) return cache.get(n);
+
+//     // Calc n value
+//     const nValue = fib(n - 1, cache) + fib(n - 2, cache);
+//     // Cache n value
+//     cache.set(n, nValue);
+
+//     return nValue;
+// }
+
 /**
- * Solution 2 -- memoized
+ * Solution 3 -- memoized (array cache for VERY large fib values)
  * Time: O(n)
  * Space: O(n)
  *
- * @param {number} n
- * @param {Map<number, number>} cache
- * @returns {number}
+ * @param {bigint} n
+ * @param {bigint[]} cache
+ * @returns {bigint}
  */
-function fib(n, cache = new Map()) {
-    if (n === 0 || n === 1) return n;
+function fib(n, cache = []) {
+    if (n === 0n || n === 1n) return n;
 
-    if (cache.has(n)) return cache.get(n);
+    if (cache[n] !== undefined) {
+        return cache[n];
+    }
 
-    // Calc n value
-    const nValue = fib(n - 1, cache) + fib(n - 2, cache);
+    const nValue = fib(n - 1n, cache) + fib(n - 2n, cache);
     // Cache n value
-    cache.set(n, nValue);
+    cache[n] = nValue;
 
     return nValue;
 }
 
-console.log(fib(5)); // 5
-console.log(fib(7)); // 13
-console.log(fib(50)); // 12586269025
+console.log(fib(5n)); // 5n
+console.log(fib(7n)); // 13n
+console.log(fib(50n)); // 12586269025n
+console.log(fib(100n)); // 354_224_848_179_261_915_075n
