@@ -20,7 +20,7 @@
  * Space: O(n)
  *
  * @param {number} n
- * @param {Map} cache
+ * @param {Map<number, number>} cache
  * @returns {number}
  */
 function fib(n, cache = new Map()) {
