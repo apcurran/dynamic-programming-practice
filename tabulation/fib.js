@@ -13,9 +13,7 @@ function fib(n) {
     table[1] = 1;
 
     for (let i = 2; i <= n; i++) {
-        const onePreviousValue = table[i - 1];
-        const twoPreviousValue = table[i - 2];
-        table[i] = onePreviousValue + twoPreviousValue;
+        table[i] = table[i - 1] + table[i - 2];
     }
 
     return table[n];
